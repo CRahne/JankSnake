@@ -15,7 +15,17 @@ mainframe.grid(sticky=(N, W, E, S))
 #mainframe.rowconfigure(100, weight=50, minsize=49)
 
 grid_list = [
-    ["N","0","1","2","3","4","5","6","7","8","9"],
+    ["N","0","1","2","3","4","5","6","7","8","9","0","1","2","3","4","5","6","7","8","9"],
+    ["0"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
+    ["1"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
+    ["2"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
+    ["3"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
+    ["4"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
+    ["5"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
+    ["6"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
+    ["7"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
+    ["8"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
+    ["9"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
     ["0"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
     ["1"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
     ["2"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
@@ -37,6 +47,7 @@ for x in grid_list:
         this_Label.grid(column=column_counter, row=row_counter)
         counter += 1
         row_counter += 1
+print(counter)
 
 def update():
     column_counter = -1
@@ -46,11 +57,12 @@ def update():
         row_counter = 0
         for y in x:
             theStringVar = grid_list[column_counter][row_counter]
-            if (column_counter == 1 and row_counter == 1) or (column_counter == 1 and row_counter == 2) :
-                this_Label = Label(mainframe, text=theStringVar, bg='yellow',padx=8,pady=2)
+            if (column_counter == 1 and row_counter == 1) or (column_counter == 1 and row_counter == 2)  or counter == 230:
+                this_Label = Label(mainframe, text=theStringVar, bg='yellow',padx=8,pady=5)
             else:
-                this_Label = Label(mainframe, text=theStringVar,bg='black',fg='orange',padx=10,pady=5)
+                this_Label = Label(mainframe, text=theStringVar,bg='black',fg='orange',padx=8,pady=5)
             this_Label.grid(column=column_counter, row=row_counter)
             counter += 1
             row_counter += 1
+    print(counter)
 update()
