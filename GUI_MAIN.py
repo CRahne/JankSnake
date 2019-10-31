@@ -10,6 +10,10 @@ mainframe = Frame(root)
 mainframe["bg"] = 'black'
 mainframe.grid(sticky=(N, W, E, S))
 
+SnakeHeadX = 10
+SnakeHeadY = 10
+
+
 #mainframe.columnconfigure(100, weight=50, minsize=49)
 #
 #mainframe.rowconfigure(100, weight=50, minsize=49)
@@ -57,12 +61,15 @@ def update():
         row_counter = 0
         for y in x:
             theStringVar = grid_list[column_counter][row_counter]
-            if (column_counter == 1 and row_counter == 1) or (column_counter == 1 and row_counter == 2)  or counter == 230:
-                this_Label = Label(mainframe, text=theStringVar, bg='yellow',padx=8,pady=5)
+            if (column_counter == SnakeHeadY and row_counter == SnakeHeadX):
+                this_Label = Label(mainframe, text=theStringVar,bg='green',padx=10,pady=5)
+            elif(column_counter == 0 or row_counter == 0):
+                this_Label = Label(mainframe, text=theStringVar, bg='light gray',padx=10,pady=5)
             else:
                 this_Label = Label(mainframe, text=theStringVar,bg='black',fg='orange',padx=8,pady=5)
             this_Label.grid(column=column_counter, row=row_counter)
             counter += 1
             row_counter += 1
+        
     print(counter)
 update()
