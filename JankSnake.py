@@ -1,3 +1,10 @@
+
+
+#####################################################
+### This file runs a working version of JankSnake ###
+#####################################################
+
+
 from tkinter import *
 import keyboard
 import time
@@ -83,7 +90,7 @@ def GridInit():
         ColumnCounter += 1
         for y in range(Constants.NumberOfRows):
             # Adds a blank label to every spot in the grid
-            Labels[RowCounter].insert(ColumnCounter, Label(root, text=" ",bg=Constants.BackgroundColor,padx=Constants.ColumnSize,pady=Constants.RowSize))
+            Labels[RowCounter].insert(ColumnCounter, Label(root, text="",bg=Constants.BackgroundColor,padx=Constants.ColumnSize,pady=Constants.RowSize))
             Labels[RowCounter][ColumnCounter].grid(column = ColumnCounter, row = RowCounter)
             RowCounter+=1
 

@@ -1,7 +1,7 @@
 
 # The dimensions of the window in pixels
-WindowWidth = 920
-WindowHeight = 920
+WindowWidth = 630
+WindowHeight = 645
 # The background color of the window
 WindowBackground = 'white'
 
@@ -29,12 +29,12 @@ NumberOfRows = 15
 NumberOfColumns = 15
 
 # Adds padding(spacing) to the rows and columns
-RowSize = 13
+RowSize = 12
 ColumnSize = 20
 
 
 # Snake Speed in milliseconds
-SnakeSpeed = 250
+SnakeSpeed = 200
 # How many milliseconds faster the snake gets each section is gains
 SnakeSpeedAdd = 10
 
